@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.ibm-plex-serif {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: auto;
+  font-style: normal;
+}
+
+.abeezee {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: auto;
+  font-style: normal;
+}
