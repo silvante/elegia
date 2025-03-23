@@ -35,7 +35,9 @@
     <main class="flex h-full">
       <%= render "partials/aside" %>
       <div class="p-5 flex-1">
-        <%= yield %>
+        <div class="main-width mx-auto">
+          <%= yield %>
+        </div>
       </div>
     </main>
   </body>

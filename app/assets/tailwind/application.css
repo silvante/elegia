@@ -31,3 +31,7 @@
 .header-shadow {
   box-shadow: 0px 4px 20px #00000020;
 }
+
+.main-width {
+  width: 1100px;
+}
