@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "companies#index"
+  get "home" => "home#index"
 end
