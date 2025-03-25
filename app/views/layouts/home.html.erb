@@ -30,15 +30,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="h-screen flex flex-col">
-    <%#= render 'partials/header' %>
-    <main class="flex h-full">
-      <%#= render "partials/aside" %>
-      <div class="p-5 flex-1">
-        <div class="main-width mx-auto">
-          <%= yield %>
-        </div>
-      </div>
+  <body>
+    <main>
+        <%= yield %>
     </main>
   </body>
 </html>
