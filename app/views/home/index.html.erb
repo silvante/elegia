@@ -1,6 +1,9 @@
-<div class="w-full h-96 bg-gray-200 overflow-hidden rounded-b-3xl">
-  <video autoplay loop class="w-full">
+<div class="w-full h-[700px] bg-gray-200 overflow-hidden rounded-b-3xl flex items-center justify-center relative">
+  <video autoplay loop class="w-full brightness-40">
     <source src="/videos/bgone.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <div class="h-full w-2/3 absolute mx-auto">
+    <%= render 'partials/home/header' %>
+  </div>
 </div>

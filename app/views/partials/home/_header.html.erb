@@ -1,0 +1,11 @@
+<header class="w-full text-white flex items-center justify-between">
+    <div class="flex items-center gap-3 w-40 py-5">
+        <%= image_tag asset_path('logo_light.svg'), alt: "mylogo", width: "57px", height: "57px" %>
+        <p class="text-2xl ibm-plex-serif">Elegia</p>
+    </div>
+    <div class="flex items-center gap-10 py-5">
+        <%= link_to 'About us' %>
+        <%= link_to 'Contacts' %>
+        <%= link_to 'Registrate', new_session_path, class: "bg-white text-black py-3 px-7" %>
+    </div>
+</header>
