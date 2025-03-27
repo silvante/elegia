@@ -1,0 +1,7 @@
+<p>Hello, <%= @user.email %></p>
+<p>Someone requested a sign-in link for your account. Click the link below to sign in:</p>
+
+<%= link_to "Sign in to my account", email_link_url(token: @token) %>
+
+Cheers,
+Khamidov, Founder

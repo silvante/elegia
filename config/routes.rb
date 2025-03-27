@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "companies#index"
   get "home" => "home#index"
+
+  post 'email_links/create', as: :magic_link
+  get 'email_links/validate', as: :email_link
 end
