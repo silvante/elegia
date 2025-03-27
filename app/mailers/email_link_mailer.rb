@@ -1,0 +1,2 @@
+class EmailLinkMailer < ApplicationMailer
+end
