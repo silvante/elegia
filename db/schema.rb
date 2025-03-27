@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_24_102030) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_27_101016) do
+  create_table "email_links", force: :cascade do |t|
+    t.string "token"
+    t.datetime "expires_at"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_email_links_on_user_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"
@@ -28,5 +37,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_24_102030) do
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
+  add_foreign_key "email_links", "users"
   add_foreign_key "sessions", "users"
 end
