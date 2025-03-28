@@ -71,5 +71,13 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 
   # config/environments/development.rb
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :stmp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    user_name: Rails.application.credentials.dig(:stmp, :gmail, :user_name), # Your Gmail address
+    password: Rails.application.credentials.dig(:smtp, :gmail, :password), # Your Gmail app password
+    authentication: "plain",
+    enable_starttls_auto: true
+  }
 end
